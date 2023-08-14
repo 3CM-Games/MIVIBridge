@@ -2,14 +2,14 @@
 
 
 #include "MIVIAnimInstance.h"
-#include "MIVICharacterBase.h"
 #include "VIBlueprintFunctionLibrary.h"
+#include "Pawn/VIPawnInterface.h"
 
 void UMIVIAnimInstance::NativeInitializeAnimation()
 {
 	Super::NativeInitializeAnimation();
 
-	VaultCharacter = (TryGetPawnOwner()) ? Cast<AMIVICharacterBase>(TryGetPawnOwner()) : nullptr;
+	VaultCharacter = TryGetPawnOwner();
 }
 
 void UMIVIAnimInstance::NativeUpdateAnimation(float DeltaTime)

@@ -115,7 +115,9 @@ public:
 	virtual bool IsWalkable_Implementation(const FHitResult& HitResult) const override;
 	virtual bool CanAutoVaultInCustomMovementMode_Implementation() const override;
 
-	// *********************************************** //
+    virtual bool IsPawnVaulting_Implementation() const override;
+
+    // *********************************************** //
 	// ************* End IVIPawnInterface ************ //
 	// *********************************************** //
 };

@@ -8,7 +8,7 @@
 #include "Animation/VIAnimationInterface.h"
 #include "MIVIAnimInstance.generated.h"
 
-class AMIVICharacterBase;
+class IVIPawnInterface;
 
 /**
  * 
@@ -48,7 +48,7 @@ protected:
 
 protected:
 	UPROPERTY(BlueprintReadWrite, Category = References)
-	AMIVICharacterBase* VaultCharacter;
+	TScriptInterface<IVIPawnInterface> VaultCharacter;
 
 public:
 	UMIVIAnimInstance()

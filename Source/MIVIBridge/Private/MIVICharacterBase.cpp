@@ -303,6 +303,11 @@ bool AMIVICharacterBase::CanAutoVaultInCustomMovementMode_Implementation() const
 	*/
 }
 
+bool AMIVICharacterBase::IsPawnVaulting_Implementation() const
+{
+    return IsVaulting();
+}
+
 // *********************************************** //
 // ********* End Pawn Vaulting Interface ********* //
 // *********************************************** //
