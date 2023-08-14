@@ -18,8 +18,8 @@ void UMIVIAnimInstance::NativeUpdateAnimation(float DeltaTime)
 
 	if (VaultCharacter)
 	{
-		const bool bWasVaulting = bIsVaulting;
-		bIsVaulting = VaultCharacter->IsVaulting();
+		bool bWasVaulting = bIsVaulting;
+		bIsVaulting = IVIPawnInterface::Execute_IsPawnVaulting(VaultCharacter.GetObject());
 		if (bIsVaulting)
 		{
 			// Resetting these while vaulting leads to better blending out
