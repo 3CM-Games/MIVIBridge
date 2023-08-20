@@ -190,6 +190,11 @@ FVector AMIVICharacterBase::GetVaultDirection_Implementation() const
 	return GetActorForwardVector();
 }
 
+FVector AMIVICharacterBase::GetVaultUpDirection_Implementation() const
+{
+    return GetActorUpVector();
+}
+
 bool AMIVICharacterBase::CanVault_Implementation() const
 {
 	// Vaulting must finish before starting another vault attempt

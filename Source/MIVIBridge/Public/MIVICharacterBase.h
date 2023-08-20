@@ -107,6 +107,7 @@ public:
 	virtual FVIAnimSet GetVaultAnimSet_Implementation() const override;
 	virtual FVITraceSettings GetVaultTraceSettings_Implementation() const override;
 	virtual FVector GetVaultDirection_Implementation() const override;
+    virtual FVector GetVaultUpDirection_Implementation() const override;
 	virtual bool CanVault_Implementation() const override;
 	virtual void StartVaultAbility_Implementation() override;
 	virtual void OnLocalPlayerVault_Implementation(const FVector& Location, const FVector& Direction) override;
